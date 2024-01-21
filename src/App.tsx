@@ -11,7 +11,7 @@ import routerBindings, {
 } from "@refinedev/react-router-v6";
 import { App as AntdApp } from "antd";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import {authProvider, dataProvider, liveProvider} from "./providers";
+import {authProvider, dataProvider, liveProvider} from "@/providers";
 
 function App() {
   return (

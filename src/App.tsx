@@ -12,6 +12,7 @@ import routerBindings, {
 import { App as AntdApp } from "antd";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import {authProvider, dataProvider, liveProvider} from "@/providers";
+import {Home} from "@/pages/home";
 
 function App() {
   return (
@@ -35,7 +36,8 @@ function App() {
                 }}
               >
                 <Routes>
-                  <Route index element={<WelcomePage />} />
+                  {/*<Route index element={<WelcomePage />} />*/}
+                  <Route index element={<Home />} />
                 </Routes>
                 <RefineKbar />
                 <UnsavedChangesNotifier />

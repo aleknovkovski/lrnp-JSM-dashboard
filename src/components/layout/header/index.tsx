@@ -1,6 +1,7 @@
 import React from "react";
 
 import { Layout, Space } from "antd";
+import {CurrentUser} from "@/components/layout/current-user";
 
 export const Header = () => {
 
@@ -19,7 +20,7 @@ export const Header = () => {
     return (
         <Layout.Header style={headerStyles}>
             <Space align="center" size="middle">
-                {"<CurrentUser />"}{/*TODO: Build CurrentUser*/}
+                <CurrentUser />
             </Space>
         </Layout.Header>
     );

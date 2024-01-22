@@ -2,6 +2,7 @@ import React from "react";
 
 import type { AvatarProps } from "antd";
 import { Avatar as AntdAvatar } from "antd";
+import {getNameInitials} from "@/utilities/get-name-initials";
 
 type Props = AvatarProps & {
     name?: string;
@@ -21,7 +22,7 @@ export const CustomAvatar = ({ name = "", style, ...rest }: Props) => {
             }}
             {...rest}
         >
-            {name}
+            {getNameInitials(name)}
         </AntdAvatar>
     );
 };

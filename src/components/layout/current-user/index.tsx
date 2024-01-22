@@ -1,11 +1,14 @@
 import React from "react";
 
+import { useGetIdentity } from "@refinedev/core";
+import type { User } from "@/graphql/schema.types";
+
 import { Popover } from "antd";
 import { CustomAvatar } from "../../custom-avatar";
 
 
 export const CurrentUser = () => {
-
+    const { data: user } = useGetIdentity<User>();
 
     return (
         <>
@@ -15,7 +18,12 @@ export const CurrentUser = () => {
                 overlayInnerStyle={{ padding: 0 }}
                 overlayStyle={{ zIndex: 999 }}
             >
-                <CustomAvatar name="Firstname Lastname"/> {/*TODO: Make Dynamic}*/}
+                <CustomAvatar
+                    name={user?.name}
+                    src={user?.avatarUrl}
+                    size="default"
+                    style={{ cursor: "pointer" }}
+                />
             </Popover>
         </>
     );

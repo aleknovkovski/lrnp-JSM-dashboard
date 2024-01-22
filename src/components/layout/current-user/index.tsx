@@ -7,10 +7,12 @@ import { SettingOutlined } from "@ant-design/icons";
 import { Button, Popover } from "antd";
 import { CustomAvatar } from "../../custom-avatar";
 import { Text } from "../../text";
+import { AccountSettings } from "../account-settings";
 
 
 export const CurrentUser = () => {
     const { data: user } = useGetIdentity<User>();
+    const [opened, setOpened] = React.useState(false);
 
     const content = (
         <div
@@ -41,7 +43,7 @@ export const CurrentUser = () => {
                     icon={<SettingOutlined />}
                     type="text"
                     block
-                    onClick={() => {null}}
+                    onClick={() => setOpened(true)}
                 >
                     Account settings
                 </Button>
@@ -65,6 +67,13 @@ export const CurrentUser = () => {
                     style={{ cursor: "pointer" }}
                 />
             </Popover>
+            {user && (
+                <AccountSettings
+                    opened={opened}
+                    setOpened={setOpened}
+                    userId={user.id}
+                />
+            )}
         </>
     );
 };

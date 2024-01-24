@@ -13,7 +13,7 @@ import routerBindings, {
 import {App as AntdApp} from "antd";
 import {BrowserRouter, Outlet, Route, Routes} from "react-router-dom";
 import {authProvider, dataProvider, liveProvider} from "@/providers";
-import {Dashboard} from "pages/Dashboard";
+import {Dashboard} from "pages/dashboard";
 import {ForgotPassword, Login, Register} from "@/pages";
 import {Layout} from "@/components/layout";
 import {resources} from "@/config/resources";

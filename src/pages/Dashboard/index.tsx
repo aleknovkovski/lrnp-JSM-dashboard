@@ -1,5 +1,6 @@
 import React from 'react'
 import {Col, Row} from "antd";
+import {DealsChart, UpcomingEvents} from "@/components/dashboard";
 
 export function Dashboard() {
     return (
@@ -14,7 +15,7 @@ export function Dashboard() {
                     xl={8}
                     style={{height: '460px'}}
                 >
-                    <h1>CalendarUpcoming</h1>{/* TODO: Build this component   */}
+                    <UpcomingEvents />{/* TODO: Build this component   */}
                 </Col>
                 <Col
                     xs={24}
@@ -22,7 +23,7 @@ export function Dashboard() {
                     xl={8}
                     style={{height: '460px'}}
                 >
-                    <h1>DashboardDealsChart</h1>{/* TODO: Build this component   */}
+                    <DealsChart />{/* TODO: Build this component   */}
                 </Col>
             </Row>
         </div>

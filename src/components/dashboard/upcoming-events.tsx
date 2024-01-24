@@ -4,6 +4,7 @@ import {Badge, Card, List} from "antd";
 import {CalendarOutlined} from "@ant-design/icons";
 import {Text} from "@/components/text";
 import UpcomingEventsSkeleton from "@/components/skeleton/upcoming-events";
+import {getDate} from "@/utilities/helpers";
 export default function UpcomingEvents() {
     const [isLoading, setIsLoading] = React.useState(false);
 
@@ -43,13 +44,15 @@ export default function UpcomingEvents() {
             ) : (
                 <List
                     itemLayout="horizontal"
-                    dataSource={[{title: "Event 1", color: "red"}, {title: "Event 2", color: "blue"}, {title: "Event 3", color: "green"}, {title: "Event 4", color: "yellow"}, {title: "Event 5", color: "purple"}]}
+                    dataSource={[{title: "Event 1", color: "red", startDate: "2021-09-01", endDate: "2021-09-01"}, {title: "Event 2", color: "blue", startDate: "2021-09-01", endDate: "2021-09-01"}, {title: "Event 3", color: "green", startDate: "2021-09-01", endDate: "2021-09-01"}, {title: "Event 4", color: "yellow", startDate: "2021-09-01", endDate: "2021-09-01"}, {title: "Event 5", color: "purple", startDate: "2021-09-01", endDate: "2021-09-01"}]}
                     renderItem={(item) => {
+                        const renderDate = getDate(item.startDate, item.endDate)
+
                         return (
                             <List.Item>
                                 <List.Item.Meta
                                     avatar={<Badge color={item.color} />}
-                                    title={<Text size="xs">{`Date`}</Text>}
+                                    title={<Text size="xs">{renderDate}</Text>}
                                     description={
                                         <Text ellipsis={{ tooltip: true }} strong>
                                             {item.title}

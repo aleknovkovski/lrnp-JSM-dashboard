@@ -63,8 +63,7 @@ export default function UpcomingEvents() {
                     renderItem={() => (
                         <UpcomingEventsSkeleton />
                     )}
-                >
-                </List>
+                />
             ) : (
                 <List
                     itemLayout="horizontal"
@@ -86,8 +85,7 @@ export default function UpcomingEvents() {
                             </List.Item>
                         );
                     }}
-                >
-                </List>
+                />
             )}
 
             {!isLoading && data?.data.length === 0 && <NoEvent />}

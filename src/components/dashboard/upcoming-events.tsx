@@ -3,6 +3,7 @@ import React from 'react'
 import { Card, List } from "antd";
 import {CalendarOutlined} from "@ant-design/icons";
 import {Text} from "@/components/text";
+import UpcomingEventsSkeleton from "@/components/skeleton/upcoming-events";
 export default function UpcomingEvents() {
     const [isLoading, setIsLoading] = React.useState(true);
 
@@ -34,10 +35,8 @@ export default function UpcomingEvents() {
                 <List
                     itemLayout="horizontal"
                     dataSource={["loading1", "loading2", "loading3", "loading4", "loading5"]}
-                    renderItem={(item) => (
-                        <List.Item>
-                            {item}
-                        </List.Item>
+                    renderItem={() => (
+                        <UpcomingEventsSkeleton />
                     )}
                 >
                 </List>

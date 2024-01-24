@@ -9,9 +9,7 @@ import {useList} from "@refinedev/core";
 import {DASHBOARD_CALENDAR_UPCOMING_EVENTS_QUERY} from "@/graphql/queries";
 import dayjs from "dayjs";
 export default function UpcomingEvents() {
-    const [isLoading, setIsLoading] = React.useState(false);
-
-    const { data, isLoading: eventsLoading } = useList({
+        const { data, isLoading } = useList({
         resource: "events",
         pagination: {
             pageSize: 5,

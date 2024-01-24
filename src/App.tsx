@@ -13,7 +13,7 @@ import routerBindings, {
 import {App as AntdApp} from "antd";
 import {BrowserRouter, Outlet, Route, Routes} from "react-router-dom";
 import {authProvider, dataProvider, liveProvider} from "@/providers";
-import {Home} from "@/pages/home";
+import {Dashboard} from "pages/Dashboard";
 import {ForgotPassword, Login, Register} from "@/pages";
 import {Layout} from "@/components/layout";
 import {resources} from "@/config/resources";
@@ -57,7 +57,7 @@ function App() {
                                         </Authenticated>
                                     }
                                 >
-                                    <Route index element={<Home/>}/>
+                                    <Route index element={<Dashboard/>}/>
                                 </Route>
                             </Routes>
                             <RefineKbar/>

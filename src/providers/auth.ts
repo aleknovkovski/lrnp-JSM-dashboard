@@ -93,7 +93,7 @@ export const authProvider: AuthBindings = {
                 },
             });
 
-            // if the user is authenticated, redirect to the home page
+            // if the user is authenticated, redirect to the Dashboard page
             return {
                 authenticated: true,
                 redirectTo: "/",

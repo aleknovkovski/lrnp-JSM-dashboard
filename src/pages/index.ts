@@ -1,4 +1,4 @@
 export * from "./forgotPassword";
-export * from "./home";
+export * from "./Dashboard";
 export * from "./login";
 export * from "./register";

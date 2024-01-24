@@ -7,11 +7,28 @@ import UpcomingEventsSkeleton from "@/components/skeleton/upcoming-events";
 import {getDate} from "@/utilities/helpers";
 import {useList} from "@refinedev/core";
 import {DASHBOARD_CALENDAR_UPCOMING_EVENTS_QUERY} from "@/graphql/queries";
+import dayjs from "dayjs";
 export default function UpcomingEvents() {
     const [isLoading, setIsLoading] = React.useState(false);
 
     const { data, isLoading: eventsLoading } = useList({
         resource: "events",
+        pagination: {
+            pageSize: 5,
+        },
+        sorters: [
+            {
+                field: "startDate",
+                order: "asc",
+            },
+        ],
+        filters: [
+            {
+                field: "startDate",
+                operator: "gte",
+                value: dayjs().format("YYYY-MM-DD"),
+            },
+        ],
         meta: {
             gqlQuery: DASHBOARD_CALENDAR_UPCOMING_EVENTS_QUERY,
         },

@@ -89,6 +89,20 @@ export default function UpcomingEvents() {
                 >
                 </List>
             )}
+
+            {!isLoading && data?.data.length === 0 && <NoEvent />}
         </Card>
     )
 }
+const NoEvent = () => (
+    <span
+        style={{
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+            height: "220px",
+        }}
+    >
+    No Upcoming Event
+  </span>
+);

@@ -20,7 +20,7 @@ export function Dashboard() {
                 <Col
                     xs={24}
                     sm={24}
-                    xl={8}
+                    xl={16}
                     style={{height: '460px'}}
                 >
                     <DealsChart />{/* TODO: Build this component   */}

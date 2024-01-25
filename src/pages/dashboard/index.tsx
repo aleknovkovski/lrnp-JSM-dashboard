@@ -15,7 +15,7 @@ export function Dashboard() {
                     xl={8}
                     style={{height: '460px'}}
                 >
-                    <UpcomingEvents />{/* TODO: Build this component   */}
+                    <UpcomingEvents />
                 </Col>
                 <Col
                     xs={24}
@@ -23,7 +23,7 @@ export function Dashboard() {
                     xl={16}
                     style={{height: '460px'}}
                 >
-                    <DealsChart />{/* TODO: Build this component   */}
+                    <DealsChart />
                 </Col>
             </Row>
         </div>

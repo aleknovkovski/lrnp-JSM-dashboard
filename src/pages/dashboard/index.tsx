@@ -5,6 +5,17 @@ import {DealsChart, UpcomingEvents} from "@/components/dashboard";
 export function Dashboard() {
     return (
         <div>
+            <Row gutter={[32, 32]} style={{marginTop: '32px'}}>
+                <Col xs={24} sm={24} xl={8}>
+                    DashboardTotalCountCard
+                </Col>
+                <Col xs={24} sm={24} xl={8}>
+                    DashboardTotalCountCard
+                </Col>
+                <Col xs={24} sm={24} xl={8}>
+                    DashboardTotalCountCard
+                </Col>
+            </Row>
             <Row
                 gutter={[32, 32]}
                 style={{marginTop: '32px'}}
